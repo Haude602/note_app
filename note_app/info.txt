@@ -1,0 +1,94 @@
+Creating the project
+1) Go to VS code and install flutter and Dart
+2) CLick on folder icon and press CTRL+SHIT+press
+3) Select Flutter project and name the project after selecting application
+4) Start project
+
+____________________________
+
+Dependencies
+1) Go to pubspec.yaml
+2) Add lines in deoendencies
+"
+#database storage
+  sqflite: ^2.0.0+3
+
+  #format date time
+  intl: ^0.17.0
+
+  #display todos in grid
+  flutter_staggered_grid_view: ^0.4.0-nullsafety.3
+"
+__________________________________________
+
+Cretain database folders
+1) Go to lib folder and create folder "db" and create file "notes_database.dart"
+2) Create "model" folder in lib folder and create file "note.dart" inside in
+3) Add codes for openning and closing databse in notes_database.dart file
+
+_______________________________________________
+
+Cretaing Database model 
+
+1) Go to note.dart inside model folder
+
+2) create class Note and create database tables and fields
+
+3)  Go back to notes_database.dart and inside Future _createDB(), call the database execute methods i.e. 
+" await db.execute()";
+4) Create tables and columns inside it, also add columns and columns type ( field type ) there
+
+
+_________________________________________________
+
+CRUD thinsg 
+
+1) Go to notes_database.dart and create new method called "create"
+2) FOllow the codes of insertion in it, and  notecopy and converson to json in note.dart file
+3) Write the code for reading the notes in notes_database.dart
+4) Also covert data to Json on notes.dart 
+
+_____________________________________________________
+
+Writing multiple notes
+1) In notes_database.dart add readAllNotes code part
+
+_____________________________________
+
+Updating existing notes
+
+1) Create the update method in notes_database.dart
+2) create instance and convert to json in same method 
+
+_______________________________________________
+
+Deleting the notes
+1) Create the delete method in notes_database.dart
+2) Define which note to delete
+
+_______________________________________________
+
+Creatinf the UI (pages)
+
+1) Create page folder and define 3 files 
+
+_______________________________________________
+
+Creating widget
+
+1) Creatde widget folder and write code there
+
+______________________________________________________
+
+Edit main.dart accordindly to call and import all files
+
+________________________________________________________________
+
+Change the icon by making changes in dependencies of pubpec.yaml file, find dependencies from pub.dev website and adding file "logo.png" in new folder "assets"
+
+____________________________________________________________________
+
+Building apk 
+1) Run " flutter build apk" in terminal 
+
+
