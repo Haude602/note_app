@@ -39,6 +39,7 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           actions: [editButton(), deleteButton()],
+          backgroundColor: Colors.red,
         ),
         body: isLoading
             ? Center(child: CircularProgressIndicator())

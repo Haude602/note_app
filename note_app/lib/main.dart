@@ -21,13 +21,7 @@ class MyApp extends StatelessWidget {
         title: title,
         themeMode: ThemeMode.dark,
         theme: ThemeData(
-          primaryColor: Colors.black,
-          scaffoldBackgroundColor: Colors.blueGrey.shade900,
-          appBarTheme: AppBarTheme(
-            backgroundColor: Colors.transparent,
-            elevation: 0,
-          ),
-        ),
+            primaryColor: Colors.white10, scaffoldBackgroundColor: Colors.grey),
         home: NotesPage(),
       );
 }
