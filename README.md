@@ -13,3 +13,5 @@ Note app is a simple app to make notes, it uses CRUD operations of DBMS using SQ
 
 ## To build apk file
  Run in terminal the following command " flutter build apk " 
+ 
+ Preferences : https://youtu.be/UpKrhZ0Hppk
