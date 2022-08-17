@@ -9,9 +9,7 @@ Note app is a simple app to make notes, it uses CRUD operations of DBMS using SQ
 4) If there shows to install missing packages, do click on " Install packages" 
 5) Go to main.dart inside lib folder and press F5 ( only after connecting the mobile to your desktop or switching on the emulator)
 6) Wait to see the note app on screen
-8) Enjoy
-
-## To build apk file
- Run in terminal the following command " flutter build apk " 
+8) Once everything is good, build the apk file for app by running in terminal the following command " flutter build apk".
+9) Enjoy 
  
  Preferences : https://youtu.be/UpKrhZ0Hppk
