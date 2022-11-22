@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:note_app/page/notes_page.dart';
+import 'package:note_app/screens/wrapper.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         themeMode: ThemeMode.dark,
         theme: ThemeData(
             primaryColor: Colors.white10, scaffoldBackgroundColor: Colors.grey),
-        home: NotesPage(),
+        //home: NotesPage(),
+        home: Wrapper(),
       );
 }

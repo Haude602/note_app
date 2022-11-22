@@ -91,4 +91,93 @@ ____________________________________________________________________
 Building apk 
 1) Run " flutter build apk" in terminal 
 
+____________________________________________________________________________________
+
+Adding Login Features using firebase and firestore
+____________________________________________________________________________________
+
+Setting up Firebsae
+
+1) Go to firebase.google.com
+2) Create a free account if u dont have
+3) Create a new project "note-app"
+4) Click on android icon after project is created
+5) For android Package name go to VS code and click on "android" folder then go to path "androids>app>src>build.gradle"
+6) Edit the applicationID name (Unique) from there(inside code in line " applicationId "com.example.brew_crew"  
+   and edit the code like "com.vikrant.brew_crew") i.e. repalce example with any unique word.
+7) Copy this "com.vikrant.brew_crew" in android package name in firebase site. and enter any nick name and register
+8) DOwnload json file from there and copy in project folder in android>app
+9) Copy from there the depencies line "
+classpath 'com.google.gms:google-services:4.0.1' 
+"
+and paste it in android>buil.gradle dependencies
+Note : use(....: 4.0.1 ) not other even if in website is other edit it
+
+10) Copy the plugin id form site again "
+
+apply plugin: 'com.google.gms.google-services'
+
+"
+and paste it in android>app>src>build.gradle 
+11) Click on next on firebase site and save project
+
+
+_____________________________________________________
+
+Oauth
+
+1) Goto https://pub.dev/packages/firebase_auth/install
+2) Copy the dependencies " firebase_auth: ^3.3.17 " from there 
+3) Go to " pubspec.yaml" file and paste the above dependencies in dependencies 
+4) Go to " https://pub.dev/packages/cloud_firestore/install "
+5) Copy the dependecies " cloud_firestore: ^3.1.14 "
+6) Paste it in pubspec.yaml dependencies
+
+Now we are ready to interact with backened
+
+___________________________________________________________________________
+
+
+Creating home page 
+
+A) when logged in show one page
+B) When not, show another
+
+1) Make "screens" folder inside lib folder
+2) Create 2 folder inside screens folder i.e. "home" and "authenticate"
+3) Create file "authenticate.dart" in authenticate folder
+4) import "package:flutter/material.dart"
+note: by typing "import package" and then press tab to see options and select
+5) add stateful widget by typing "stful" and then tab
+6) Add class name as Authenticate 
+i.e. 
+"
+class Authenticate extends StatefulWidget {
+
+"
+7) Inside container add "
+child: Text('authenticate'),
+"
+8) Inside home folder add "home.dart" file
+9) import 'package:flutter/material.dart';
+10) add stateless widget by typing "stles" and then key tab
+11) Give the class name "Home"
+12) add child:Text('home'), inside container
+13) Create "wrapper.dart" file directly inside screens folder because it is neither home nor authenticate
+14) Imporat material.dart as always and "stles" and tab to add stateless widget
+15) Remove container from it statles widget and return Home()
+typing "Home" after import and selecting what it shows in list as Home()
+
+Note: Automatic import of homr.dart will be done after this
+
+16) Go to main.dart and remove everything inside material app, also remove all home page or statefu; widget below it 
+17 ) Inside materialapp()
+addd " home: Wrapper(), "
+18 ) Run progran if it says something error with sdk version go to android>app>build.gradle and replace sdkversion code line with 
+"
+minSdkVersion 21
+"
+
+Note: it will automatically import wrapper.dart in main.dart
+
 

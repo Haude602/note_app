@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "161353436158",
+    "project_id": "note-app-1ff1e",
+    "storage_bucket": "note-app-1ff1e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161353436158:android:6fcd6a0f898ee7a0ed4eaf",
+        "android_client_info": {
+          "package_name": "com.vikrant.note_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161353436158-1agg94bldp84gn9prqambqqa9de7mp52.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqAe_1F5C9THeAKVov3IQ9v3xlx7XRGNc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161353436158-1agg94bldp84gn9prqambqqa9de7mp52.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
