@@ -5,7 +5,9 @@ import 'package:note_app/db/notes_database.dart';
 import 'package:note_app/model/note.dart';
 import 'package:note_app/page/edit_note_page.dart';
 import 'package:note_app/page/note_detail_page.dart';
+import 'package:note_app/services/auth.dart';
 import 'package:note_app/widget/note_card_widget.dart';
+import "package:note_app/services/auth.dart";
 
 class NotesPage extends StatefulWidget {
   @override
@@ -13,6 +15,7 @@ class NotesPage extends StatefulWidget {
 }
 
 class _NotesPageState extends State<NotesPage> {
+  final AuthService _auth = AuthService();
   late List<Note> notes;
   bool isLoading = false;
 
@@ -42,13 +45,21 @@ class _NotesPageState extends State<NotesPage> {
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           elevation: 5.0, //shadow of appbar
-          backgroundColor: Colors.red,
+          backgroundColor: Color.fromARGB(255, 255, 189, 57),
           title: Text(
             'Note App',
             style:
                 GoogleFonts.montserratAlternates(fontWeight: FontWeight.bold),
           ),
-          actions: [Icon(Icons.search), SizedBox(width: 12)],
+          actions: [
+            FlatButton.icon(
+              icon: Icon(Icons.person),
+              onPressed: () async {
+                await _auth.signOut(); //signOut is firebase builtin method
+              },
+              label: Text('logout'),
+            ),
+          ],
           titleSpacing: 00.0,
           centerTitle: true,
           toolbarHeight: 50.2,
@@ -70,7 +81,7 @@ class _NotesPageState extends State<NotesPage> {
                   : buildNotes(),
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.red,
+          backgroundColor: Color.fromARGB(255, 255, 189, 57),
           child: Icon(Icons.add),
           onPressed: () async {
             await Navigator.of(context).push(

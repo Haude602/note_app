@@ -39,7 +39,7 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           actions: [editButton(), deleteButton()],
-          backgroundColor: Colors.red,
+          backgroundColor: Color.fromARGB(255, 255, 189, 57),
         ),
         body: isLoading
             ? Center(child: CircularProgressIndicator())
@@ -51,7 +51,7 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
                     Text(
                       note.title,
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color.fromARGB(157, 0, 0, 0),
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                       ),
@@ -64,7 +64,8 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
                     SizedBox(height: 8),
                     Text(
                       note.description,
-                      style: TextStyle(color: Colors.white70, fontSize: 18),
+                      style: TextStyle(
+                          color: Color.fromARGB(166, 0, 0, 0), fontSize: 18),
                     )
                   ],
                 ),

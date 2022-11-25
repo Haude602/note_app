@@ -132,6 +132,7 @@ CREATE TABLE $tableNotes (
   Future close() async {
     //method to close database
     final db = await instance.database;
+    _database = null;
     db.close();
   }
 }

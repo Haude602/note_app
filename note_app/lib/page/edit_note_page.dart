@@ -35,7 +35,7 @@ class _AddEditNotePageState extends State<AddEditNotePage> {
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           actions: [buildButton()],
-          backgroundColor: Colors.red,
+          backgroundColor: Color.fromARGB(255, 255, 189, 57),
         ),
         body: Form(
           key: _formKey,

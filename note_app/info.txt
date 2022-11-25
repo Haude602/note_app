@@ -91,6 +91,10 @@ ____________________________________________________________________
 Building apk 
 1) Run " flutter build apk" in terminal 
 
+
+****************************************************************************************************************************************************************************************
+
+
 ____________________________________________________________________________________
 
 Adding Login Features using firebase and firestore
@@ -179,5 +183,80 @@ minSdkVersion 21
 "
 
 Note: it will automatically import wrapper.dart in main.dart
+
+_____________________________________________________
+
+Oauth
+
+OAuth
+1) Go t console.firebase.google.com and open the project you created
+2) Click on "Authentication", go to "sign in methods"
+3) Click on "set up Sign in method"
+4) Select "email/password" and click on enable and save
+5) Again, click on " add new provider" and  select "Anonymous" and enable it
+6) Create a folder "services" in Lib folder and create there a file "auth.dart"
+7) import "package:firebase_auth/firebase_auth.dart";
+8) Create class as 
+"
+class AuthService {
+ 
+
+}
+"
+9) Setup sign in anonymously code for signing in without gmail
+
+
+__________________________________________________________________________
+
+Creating sign in widget
+
+1) Create a file "sign_in.dart" inside lib>screens>authenticate
+2) Import material.dart and type stful and tab key to create stful widget and name the class as "SignIn"
+3) Return " Scafffold" and set body and appbar design inside it 
+4) Go to wrapper.dart and return "Authenticate()" instead of home 
+5) Go to "authenticate.dart" and change the "child"'s "Text" field to "SignIn()" widget
+6) Run the main.dart to see sign in homepage in mobile
+7) Go to sign_in.dart and add line "
+final AuthService _auth = AuthService(); " inside stateful wodget
+8) Go sign_in.dart and inside body inside "assync" add line "
+dynamic result =  await _auth.signInAnon();
+"
+Note: This will wait when clicked on sign in and wait if there is data in user if not return null
+9) Repalce the code of main.dart with " 
+  void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const MyApp());
+}
+" Note only voide main gunction replacement nothing else to be disturbed. The "async and middle 2 lines are added in updated version of cloud_firestore
+10) Run code to check if all good
+
+
+____________________________________________________________________________________________________________________________________________________
+
+
+Summarising
+
+1) Make files authenticate.dart, register.dart,
+and sign_in.dart in authenticate folder and write necessary codes from here(simply copy paste)
+
+2) Make a file wrapper.dart inside lib>screens>home to show login page and show desired page when logged in.
+
+3) Create user.dart file inside lib>model to create users and their uid
+
+4) Create a shared folder and make 2 files constants.dart and loading.dart and copy the code there
+
+5) Make a folder "services" and create a file auth.dart there and there the codes
+
+6) Copy the main.dart file as same it is
+
+7) Go to wrapper.dart and replace NotesPage() from  "
+else {
+      return NotesPage(); 
+" 
+
+with other page you want to landing after logging in
+
+8) Edit appbar , body according to your design inside sign_in.dart and register.dart file 
 
 
