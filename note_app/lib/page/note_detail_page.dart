@@ -40,6 +40,13 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
         appBar: AppBar(
           actions: [editButton(), deleteButton()],
           backgroundColor: Color.fromARGB(255, 255, 189, 57),
+          toolbarHeight: 50.2,
+          toolbarOpacity: 0.8,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                bottomRight: Radius.circular(25),
+                bottomLeft: Radius.circular(25)),
+          ),
         ),
         body: isLoading
             ? Center(child: CircularProgressIndicator())

@@ -43,6 +43,7 @@ class _NotesPageState extends State<NotesPage> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+        backgroundColor: Color.fromARGB(62, 255, 189, 57),
         appBar: AppBar(
           elevation: 5.0, //shadow of appbar
           backgroundColor: Color.fromARGB(255, 255, 189, 57),
@@ -70,15 +71,23 @@ class _NotesPageState extends State<NotesPage> {
                 bottomLeft: Radius.circular(25)),
           ),
         ),
-        body: Center(
-          child: isLoading
-              ? CircularProgressIndicator()
-              : notes.isEmpty
-                  ? Text(
-                      'Add Notes',
-                      style: TextStyle(color: Colors.white, fontSize: 24),
-                    )
-                  : buildNotes(),
+        body: Container(
+          decoration: BoxDecoration(
+            image: new DecorationImage(
+              image: new AssetImage("assets/bg.jpg"),
+              fit: BoxFit.fill,
+            ),
+          ),
+          child: Center(
+            child: isLoading
+                ? CircularProgressIndicator()
+                : notes.isEmpty
+                    ? Text(
+                        'Add Notes',
+                        style: TextStyle(color: Colors.white, fontSize: 24),
+                      )
+                    : buildNotes(),
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: Color.fromARGB(255, 255, 189, 57),

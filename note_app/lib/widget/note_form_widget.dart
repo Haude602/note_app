@@ -38,6 +38,9 @@ class NoteFormWidget extends StatelessWidget {
                   Expanded(
                     child: Slider(
                       value: (number ?? 0).toDouble(),
+                      activeColor: Color.fromARGB(255, 255, 189,
+                          57), // we pass default value of color as 100 as we cant pas snull to it
+                      inactiveColor: Color.fromARGB(101, 255, 189, 57),
                       min: 0,
                       max: 5,
                       divisions: 5,
@@ -80,7 +83,7 @@ class NoteFormWidget extends StatelessWidget {
         decoration: InputDecoration(
           border: InputBorder.none,
           hintText: 'Type something...',
-          hintStyle: TextStyle(color: Colors.white60),
+          hintStyle: TextStyle(color: Color.fromARGB(68, 0, 0, 0)),
         ),
         validator: (title) => title != null && title.isEmpty
             ? 'The description cannot be empty'

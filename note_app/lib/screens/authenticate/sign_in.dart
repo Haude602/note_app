@@ -60,6 +60,12 @@ class _SignInState extends State<SignIn> {
               ),
             ),
             body: Container(
+                decoration: BoxDecoration(
+                  image: new DecorationImage(
+                    image: new AssetImage("assets/bg.jpg"),
+                    fit: BoxFit.fill,
+                  ),
+                ),
                 padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50),
                 child: Form(
                     key: _formKey,
