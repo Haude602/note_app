@@ -5,6 +5,9 @@ I also added firebase authentication in another version which is in '1) authenti
 
 
 <img src="readme_images/ss1.jpeg" alt="Authentication" width="250" height="450">
+<img src="readme_images/ss2.jpeg" alt="Home" width="250" height="450">
+<img src="readme_images/ss3.jpeg" alt="Note Widget" width="250" height="450">
+<img src="readme_images/ss4.jpeg" alt="Note Edit" width="250" height="450">
 
 Please clone different branches for different version of this app. Every new branch is added with some more updates.
 
