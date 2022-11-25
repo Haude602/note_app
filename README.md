@@ -16,7 +16,6 @@ I also added firebase authentication in another version which is in '1) authenti
   </div>
  <div class="column">
   <img src="readme_images/ss4.jpeg" alt="Note Edit" width="250" height="450">
-    
   </div>
 </div>
 
