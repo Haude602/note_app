@@ -3,7 +3,11 @@
 Note app is a simple app to make notes, it uses CRUD operations of DBMS using SQLite and SQFlite. The notes are stored in local database inside the mobile.
 I also added firebase authentication in another version which is in '1) authentication' branch.
 
-![Screenshots](readme_images_/ss1.jpeg)
+<img
+  src="readme_images/ss1.jpeg"
+  alt="Alt text"
+  title="Optional title"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 Please clone different branches for different version of this app. Every new branch is added with some more updates.
 
