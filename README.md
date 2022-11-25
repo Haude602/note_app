@@ -4,7 +4,7 @@ Note app is a simple app to make notes, it uses CRUD operations of DBMS using SQ
 I also added firebase authentication in another version which is in '1) authentication' branch.
 
 
-<img src="readme_images/ss1.jpeg" alt="Authentication" width="200" height="400">
+<img src="readme_images/ss1.jpeg" alt="Authentication" width="250" height="400">
 
 Please clone different branches for different version of this app. Every new branch is added with some more updates.
 
