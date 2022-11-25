@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:note_app/model/note.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 final _lightColors = [
   Colors.amber.shade300,
@@ -39,16 +40,17 @@ class NoteCardWidget extends StatelessWidget {
           children: [
             Text(
               time,
-              style: TextStyle(color: Colors.grey.shade700),
+              // style: TextStyle(color: Colors.grey.shade700),
+              style: GoogleFonts.montserratAlternates(
+                  fontWeight: FontWeight.w200, color: Colors.grey.shade700),
             ),
             SizedBox(height: 4),
             Text(
               note.title,
-              style: TextStyle(
-                color: Color.fromARGB(201, 0, 0, 0),
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
+              style: GoogleFonts.montserratAlternates(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Colors.white),
             ),
           ],
         ),
