@@ -7,7 +7,7 @@ I also added firebase authentication in another version which is in '1) authenti
   src="readme_images/ss1.jpeg"
   alt="Alt text"
   title="Optional title"
-  style="display: inline-block; margin: 0 auto; max-width: 300px">
+  style="display: inline-block; margin: 0 auto; max-width: 50px">
 
 Please clone different branches for different version of this app. Every new branch is added with some more updates.
 
