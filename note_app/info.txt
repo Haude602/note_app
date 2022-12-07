@@ -85,7 +85,7 @@ Edit main.dart accordindly to call and import all files
 ________________________________________________________________
 
 Change the icon by making changes in dependencies of pubpec.yaml file, find dependencies from pub.dev website and adding file "logo.png" in new folder "assets"
-
+Vist: https://youtu.be/eMHbgIgJyUQ to see in details
 ____________________________________________________________________
 
 Building apk 
